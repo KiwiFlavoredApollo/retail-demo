@@ -13,7 +13,7 @@ import {
 } from "@chakra-ui/react";
 import { LuBell, LuMail, LuSearch } from "react-icons/lu";
 
-export const MainPage = () => {
+export const DashboardPage = () => {
   const sideButtonProps: ButtonProps = {
     "variant": "ghost"
   }
