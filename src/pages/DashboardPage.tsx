@@ -15,7 +15,8 @@ import { LuBell, LuMail, LuSearch } from "react-icons/lu";
 
 export const DashboardPage = () => {
   const sideButtonProps: ButtonProps = {
-    "variant": "ghost"
+    "variant": "ghost",
+    "rounded": "full"
   }
 
   const cardRootProps: CardRootProps = {
@@ -26,9 +27,9 @@ export const DashboardPage = () => {
   return (
     <>
       <Container maxWidth={ "8xl" } height={ "100vh" }>
-        <Grid templateColumns={ "2fr 10fr" } height={ "100%" } gap={ "4" }>
+        <Grid templateRows={ "auto 1fr" } templateColumns={ "2fr 10fr" } height={ "100%" } gap={ "4" }>
           <GridItem>
-            <Stack direction={ "column" }>
+            <Stack direction={ "column" } gap={ "4" } padding={ "4" }>
               <Button { ...sideButtonProps }>Dashboard</Button>
               <Button { ...sideButtonProps }>Tasks</Button>
               <Button { ...sideButtonProps }>Calendar</Button>
@@ -43,9 +44,9 @@ export const DashboardPage = () => {
 
           <GridItem>
             <Stack direction={ "column" }>
-              <Stack direction={ "row" }>
+              <Stack direction={ "row" } padding={ "4" }>
                 <InputGroup startElement={ <LuSearch/> }>
-                  <Input></Input>
+                  <Input rounded={ "full" }></Input>
                 </InputGroup>
                 <IconButton rounded={ "full" }>
                   <LuMail></LuMail>
@@ -56,7 +57,7 @@ export const DashboardPage = () => {
                 <Avatar.Root>
                   <Avatar.Fallback></Avatar.Fallback>
                 </Avatar.Root>
-                <Text flexShrink={ 0 } alignContent={"center"}>John Doe</Text>
+                <Text flexShrink={ 0 } alignContent={ "center" }>John Doe</Text>
               </Stack>
               <Grid templateColumns={ "repeat(4, 1fr)" } height={ "100%" } gap={ "4" }>
                 <GridItem>
