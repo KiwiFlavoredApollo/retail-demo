@@ -20,9 +20,9 @@ export const ShoppingCartPage = () => {
   return (
     <>
       <Grid templateRows={ "auto" }>
-        <GridItem padding={ "2" }>
+        <GridItem padding={ "4" }>
           <Container maxWidth={ "8xl" }>
-            <Stack direction={ "row-reverse" } gap={ 4 }>
+            <Stack direction={ "row-reverse" } gap={ "4" }>
               <IconButton rounded={ "full" } variant={ "ghost" }>
                 <LuShoppingCart></LuShoppingCart>
               </IconButton>
