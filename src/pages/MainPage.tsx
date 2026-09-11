@@ -13,9 +13,12 @@ import {
   Image, Heading, Box
 } from "@chakra-ui/react";
 import exampleImage from "@/assets/hero.png"
-import { LuBell, LuMail, LuSearch, LuShoppingCart, LuUser } from "react-icons/lu";
+import { LuBell, LuLayoutDashboard, LuMail, LuSearch, LuShoppingCart, LuUser } from "react-icons/lu";
+import { useNavigate } from "react-router-dom";
 
 export const MainPage = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <Grid templateRows={ "auto" } gap={ "8" }>
@@ -28,6 +31,9 @@ export const MainPage = () => {
               <IconButton rounded={ "full" } variant={ "ghost" }>
                 <LuUser></LuUser>
               </IconButton>
+              <IconButton rounded={ "full" } variant={ "solid" } onClick={() => navigate("/dashboard")}>
+                <LuLayoutDashboard></LuLayoutDashboard>
+              </IconButton>
             </Stack>
           </Container>
         </GridItem>
@@ -35,7 +41,7 @@ export const MainPage = () => {
         <GridItem>
           <Container maxWidth={ "xl" }>
             <InputGroup width={ "100%" } startElement={ <LuSearch></LuSearch> }>
-              <Input></Input>
+              <Input rounded={ "full" }></Input>
             </InputGroup>
           </Container>
         </GridItem>

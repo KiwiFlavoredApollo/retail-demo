@@ -16,6 +16,7 @@ import { LuBell, LuMail, LuMoveUpRight, LuPlus, LuSearch } from "react-icons/lu"
 import reactIcon from "@/assets/react.svg"
 import viteIcon from "@/assets/vite.svg"
 import heroImage from "@/assets/hero.png"
+import { useNavigate } from "react-router-dom";
 
 export const DashboardPage = () => {
   const sideButtonProps: ButtonProps = {
@@ -32,6 +33,8 @@ export const DashboardPage = () => {
     "boxSize": "30px",
     "fit": "contain",
   }
+
+  const navigate = useNavigate();
 
   return (
     <>
@@ -277,6 +280,20 @@ export const DashboardPage = () => {
                         </Table.Cell>
                       </Table.Row>
                     </Table.Root>
+                  </Card.Body>
+                </Card.Root>
+              </GridItem>
+              <GridItem>
+                <Card.Root { ...cardRootProps }>
+                  <Card.Header>
+                    <Card.Title>Navigate</Card.Title>
+                  </Card.Header>
+                  <Card.Body>
+                    <Stack direction={ "column" } gap={ "4" }>
+                      <Button rounded={ "full" } onClick={() => navigate("/")}>Home</Button>
+                      <Button rounded={ "full" } onClick={() => navigate("/shopping-cart")}>Shopping Cart</Button>
+                      <Button rounded={ "full" } onClick={() => navigate("/swipe")}>Swipe</Button>
+                    </Stack>
                   </Card.Body>
                 </Card.Root>
               </GridItem>
